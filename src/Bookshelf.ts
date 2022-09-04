@@ -30,4 +30,10 @@ export class Bookshelf {
   getTotalNumberOfBooks(): number {
     return this.storedBooks.length;
   }
+
+  getBooksPublishedAfter(date: string | Date): Book[] {
+      const dateAsDate = new Date(date);
+
+      return this.storedBooks.filter(book => book.date.getTime() >= dateAsDate.getTime());
+  }
 }
