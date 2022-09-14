@@ -29,7 +29,7 @@ describe('Bookshelf', () => {
   };
 
   let bookshelf: Bookshelf;
-
+  let aDate = new Date();
   beforeEach(() => {
     bookshelf = new Bookshelf();
   });
@@ -80,4 +80,11 @@ describe('Bookshelf', () => {
     bookshelf.addBook(aLaRechercheDuTempsPerdu);
     expect(bookshelf.getTotalNumberOfBooks()).toEqual(1);
   });
+  // it('should return all the books published after that the given date', () => {
+  //   bookshelf.getBooksPublishedAfter(aDate);
+  //   expect(bookshelf.getBooksPublishedAfter(aDate)).toEqual([
+  //     theHobbit,
+  //     theLordOfTheRings,
+  //   ])
+  // })
 });
